@@ -67,7 +67,7 @@ class EEGPredictionGUI:
 
                 if original_shape:
                     self.X_test_loaded = np.array(data).reshape(original_shape)
-                    self.X_test_loaded = self.X_test_loaded[:4]
+                    self.X_test_loaded = self.X_test_loaded[:20]
                     self.predicted_data = self.model.predict(self.X_test_loaded).argmax(axis=-1)
         except Exception as e:
             print(f"Error loading EEG data: {e}")
